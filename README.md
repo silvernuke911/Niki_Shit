@@ -25,3 +25,14 @@ The raw data file can be found [here](https://docs.google.com/spreadsheets/d/176
 And Niki's study [here](https://docs.google.com/document/d/1STxgiQR7ASBzdH0naifeZxV23L84LieEthjv1698LC4/edit?tab=t.0)
 
 ## Module Descriptions
+
+- `stats.py` - A collection of formulae for t-testing
+- `sfi.py` - A function for calculating the sciatic functional index
+- `paw_analyze.py` - an image analysis library and tool to measure the parameters for sfi
+- `dataframes.py` - a module which turns the raw csv / xlsx file into pd dataframes for easier data analysis
+
+
+## Image Code
+
+## Data Code
+
