@@ -59,10 +59,10 @@ And Niki's study [here](https://docs.google.com/document/d/1STxgiQR7ASBzdH0naife
 
 ### Time Code
 W - Week
-6 weeks
++ Week number (4 weeks)
 
-## Ex:
-    P1W1 - Positve 1, Week 1
+### Example:
+P1W1 - Positve 1, Week 1
 
 ## Data Code
 - R - Rotation
