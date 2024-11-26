@@ -7,7 +7,7 @@ cc. Vercil Juan
 The collection is a group of t-tests and chi-square analysis for the data, a program to measure and collect to spread data, and a script which turns the data from the raw file into pd data frames, and another script to do calculate specific shit. Here is a checklist for the tasts to be completed
 
 ## Tasks to Complete
-- [ ] T-Tester modules
+- [x] T-Tester modules
 - [ ] Toe Spread png measurer
 - [ ] Toe Spread data collector
 - [ ] Google-Python API to collect the xlsx file to csv
@@ -23,3 +23,5 @@ Most of the resources is taken from the study of [Ompacan](https://drive.google.
 The raw data file can be found [here](https://docs.google.com/spreadsheets/d/176y9Tg4QkZA_H6Ec-eKRBOWocu7B78pMfoGY3x7W7bo/edit?fbclid=IwY2xjawGm1IVleHRuA2FlbQIxMQABHWCoXzEnQxFthMzRlwakixfX4Bk3g-W8euo0MKwLeTxk4nOrRt8YqWGiGA_aem_HfODvd2sFTlMnq93jEDtTQ&gid=1655045917#gid=1655045917)
 
 And Niki's study [here](https://docs.google.com/document/d/1STxgiQR7ASBzdH0naifeZxV23L84LieEthjv1698LC4/edit?tab=t.0)
+
+## Module Descriptions
