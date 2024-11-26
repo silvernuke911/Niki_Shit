@@ -92,7 +92,7 @@ def anova_oneway(*groups):
 
 
 
-def tukey_posthoc_test(data, groups):
+def tukey_posthoc_test(data, groups, alpha=0.05):
     """
     Perform Tukey's Honest Significant Difference (HSD) post hoc test.
 
@@ -113,13 +113,7 @@ def tukey_posthoc_test(data, groups):
         A table summarizing the pairwise comparisons, including group pairs, 
         mean difference, p-value, confidence intervals, and whether the difference is significant.
 
-    Example:
-    --------
-    >>> data = [23, 25, 22, 30, 28, 31, 35, 33, 32, 30, 20, 19, 21, 22, 23]
-    >>> groups = ['group1'] * 5 + ['group2'] * 5 + ['group3'] * 5
-    >>> summary = tukey_posthoc_test(data, groups)
-    >>> print(summary)
     """
     # Perform Tukey's HSD post hoc test
-    tukey_result = pairwise_tukeyhsd(endog=data, groups=groups, alpha=0.05)
+    tukey_result = pairwise_tukeyhsd(endog=data, groups=groups, alpha)
     return tukey_result.summary()
