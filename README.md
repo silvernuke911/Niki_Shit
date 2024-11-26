@@ -55,11 +55,12 @@ And Niki's study [here](https://docs.google.com/document/d/1STxgiQR7ASBzdH0naife
 - P - Positive
 - N - Negative
 - S - Sham
-+ Mouse number (5 per setup)
+
+Mouse number (5 per setup)
 
 ### Time Code
-W - Week
-+ Week number (4 weeks)
+- B - Baseline + Duplicate
+- W - Week + Week number (4 weeks)
 
 ### Example:
 P1W1 - Positve 1, Week 1
