@@ -10,8 +10,8 @@ The collection is a group of t-tests and chi-square analysis for the data, a pro
 ### Coding tasks
 - [x] T-Tester modules
 - [x] Toe spread pixel measurement
-- [ ] Toe Spread png measurer
-- [ ] Toe Spread data collector / Can be manual
+- [x] Toe Spread png measurer
+- [x] Toe Spread data collector / Can be manual
 - [ ] Google-Python API to collect the xlsx file to csv
 - [ ] Make your own csv file with the data
 - [ ] Raw excel to data frames script
@@ -23,8 +23,8 @@ The collection is a group of t-tests and chi-square analysis for the data, a pro
 - [x] Scan data W0-W1
 - [x] Clean up data
 - [x] Code converters, statistic functions, etc
-- [ ] Image distance measurer
-- [ ] Feet data collection (can be done manually)
+- [x] Image distance measurer
+- [x] Feet data collection (can be done manually)
 - [ ] Process xlsx data
 - [ ] Create dataframe from structure for xlsx data 
 - [ ] Create program to process step data
@@ -56,6 +56,7 @@ And Niki's study [here](https://docs.google.com/document/d/1STxgiQR7ASBzdH0naife
 * `image_cleaner.py` - a script to clean the images up to acceptable tolerance
 * `pdf_to_png_converter` - a script to convert the pdf files to png
 * `progress.py` - dynamic progress bar
+* `dist_measure.py` - a script to measure the toe spread and other $SFI$ parameters.
 
 ## Image Code
 
