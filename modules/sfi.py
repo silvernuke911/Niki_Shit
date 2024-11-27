@@ -15,6 +15,7 @@ def calculate_sfi(epl, npl, ets, nts, eit, nit):
     """
     sfi = (-38.3 * ((epl - npl) / npl) +
            109.5 * ((ets - nts) / nts) +
-           13.3 * ((eit - nit) / nit) -
+            13.3 * ((eit - nit) / nit) -
            8.839)
+    
     return sfi

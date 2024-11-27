@@ -9,8 +9,9 @@ The collection is a group of t-tests and chi-square analysis for the data, a pro
 ## Tasks to Complete
 ### Coding tasks
 - [x] T-Tester modules
+- [x] Toe spread pixel measurement
 - [ ] Toe Spread png measurer
-- [ ] Toe Spread data collector
+- [ ] Toe Spread data collector / Can be manual
 - [ ] Google-Python API to collect the xlsx file to csv
 - [ ] Make your own csv file with the data
 - [ ] Raw excel to data frames script
@@ -20,8 +21,10 @@ The collection is a group of t-tests and chi-square analysis for the data, a pro
 
 ### Operational tasks
 - [x] Scan data W0-W1
-- [ ] Clean up data
+- [x] Clean up data
 - [x] Code converters, statistic functions, etc
+- [ ] Image distance measurer
+- [ ] Feet data collection (can be done manually)
 - [ ] Process xlsx data
 - [ ] Create dataframe from structure for xlsx data 
 - [ ] Create program to process step data
@@ -42,32 +45,36 @@ And Niki's study [here](https://docs.google.com/document/d/1STxgiQR7ASBzdH0naife
 
 ## Module Descriptions
 
-- `stats.py` - A collection of formulae for t-testing
-- `sfi.py` - A function for calculating the sciatic functional index
-- `paw_analyze.py` - an image analysis library and tool to measure the parameters for sfi
-- `dataframes.py` - a module which turns the raw csv / xlsx file into pd dataframes for easier data analysis
+* `stats.py` - A collection of formulae for statistical testing
+* `imsys.py` - A library of functions for image analysis
+* `sfi.py` - A function for calculating the sciatic functional index
+* `paw_analyze.py` - an image analysis library and tool to measure the parameters for sfi
+* `dataframes.py` - a module which turns the raw csv / xlsx file into pd dataframes for easier data analysis
 
+## Utilities Description
+* `converters.py` - a set of converter functions and other important tools
+* `image_cleaner.py` - a script to clean the images up to acceptable tolerance
+* `pdf_to_png_converter` - a script to convert the pdf files to png
+* `progress.py` - dynamic progress bar
 
 ## Image Code
 
 ### Mouse Code
-- NO - Normal
-- P - Positive
-- N - Negative
-- S - Sham
+* NO - Normal
+* P - Positive
+* N - Negative
+* S - Sham
 
 Mouse number (5 per setup)
 
 ### Time Code
-- B - Baseline + Duplicate
-- W - Week + Week number (4 weeks)
+* B - Baseline + Duplicate
+* W - Week + Week number (4 weeks)
 
 ### Example:
 P1W1 - Positve 1, Week 1
 
 ## Data Code
-- R - Rotation
-- T - Time
-- D - Distance
-
-
+* R - Rotation
+* T - Time
+* D - Distance
