@@ -31,6 +31,9 @@ for i, pdf_file in enumerate(pdf_files):
 
         # Save the converted image
         images[0].save(png_path, "PNG")
-        print(f"Converted {pdf_file} to {png_path}")
     except Exception as e:
         print(f"Failed to convert {pdf_file}: {e}")
+output_files = [f for f in os.listdir(output_folder) if f.endswith('.png')]
+print('')
+for output_file in output_files:
+    print(f"Processed and saved: {output_file}")

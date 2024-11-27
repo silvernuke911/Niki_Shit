@@ -115,5 +115,5 @@ def tukey_posthoc_test(data, groups, alpha=0.05):
 
     """
     # Perform Tukey's HSD post hoc test
-    tukey_result = pairwise_tukeyhsd(endog=data, groups=groups, alpha)
+    tukey_result = pairwise_tukeyhsd(endog=data, groups=groups, alpha=alpha)
     return tukey_result.summary()
