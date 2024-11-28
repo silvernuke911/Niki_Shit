@@ -31,7 +31,8 @@ def px_distance(p1, p2, w_px=2480/210):
 def record_and_measure_with_enter(image_path):
     # Load and display the image
     img = mpimg.imread(image_path)
-    fig, ax = plt.subplots()
+    scale = 2
+    fig, ax = plt.subplots(figsize = (2.1*scale, 2.97*scale))
     ax.imshow(img)
     #ax.set_title("Hover and press Enter to record points")
     ax.set_xlabel('$x$ (px)')
@@ -87,5 +88,5 @@ def record_and_measure_with_enter(image_path):
     plt.show()
 
 # Example usage
-image_path = r'data\steps_png\P5B.png'  # Image path
+image_path = r'data\steps_png\NO5W1.png'  # Image path
 record_and_measure_with_enter(image_path)
