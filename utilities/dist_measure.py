@@ -50,7 +50,7 @@ def px_distance(p1, p2, w_px=2480/210):
     return d_mm
 
 
-def update_csv(value, file_name="foots.csv"):
+def update_csv(value, file_name=r"data\foots.csv"):
     # Check if 'd' is pressed to delete the last entry
     if value == 'd':
         if os.path.exists(file_name):
@@ -77,7 +77,12 @@ def open_excel_file(file_name):
     print('Opening excel...')
     os.startfile(file_name)
 
-def record_and_measure_with_enter(image_path):
+def horz_lin(delim="---"):
+    update_csv(delim)
+    update_csv(delim)
+    update_csv(delim)
+
+def record_and_measure_with_enter(image_path, data_path):
     # Load and display the image
     img = mpimg.imread(image_path)
     scale = 2
@@ -106,7 +111,7 @@ def record_and_measure_with_enter(image_path):
                     # Calculate the distance
                     distance = px_distance(p1, p2)
                     print(f"Distance: {distance} mm")
-                    update_csv(distance,'foots.csv')
+                    update_csv(distance,data_path)
 
                     # Draw a line between the points and store the line object
                     line, = ax.plot([p1[0], p2[0]], [p1[1], p2[1]], 'k-', linewidth=0.75)
@@ -136,19 +141,16 @@ def record_and_measure_with_enter(image_path):
         elif event.key == "d":
             update_csv("d")
         elif event.key == 'n':
-            update_csv("---")
-            update_csv("---")
-            update_csv("---")
+            horz_lin()
             print('New foot')
     # Connect the key press event to the handler
     fig.canvas.mpl_connect('key_press_event', on_key_press)
     plt.show()
 
 # Example usage
+data_path = r'data\foots.csv'
 image_path = r'data\steps_png\S5W2.png'  # Image path
-record_and_measure_with_enter(image_path)
-update_csv("---")
-update_csv("---")
-update_csv("---")
-transpose_csv('foots.csv')
-open_excel_file('foots.csv')
+record_and_measure_with_enter(image_path,data_path)
+horz_lin()
+transpose_csv(data_path)
+open_excel_file(data_path)
