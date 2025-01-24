@@ -83,9 +83,14 @@ def horz_lin(delim="---"):
     update_csv(delim)
 
 def record_and_measure_with_enter(image_path, data_path):
+    # Check if the image file exists
+    if not os.path.exists(image_path):
+        print(f"File {image_path} not found")
+        return
     # Load and display the image
     img = mpimg.imread(image_path)
     scale = 2
+    img_h, img_w = img.shape[:2]
     fig, ax = plt.subplots(figsize = (2.1*scale, 2.97*scale))
     ax.imshow(img)
     #ax.set_title("Hover and press Enter to record points")
@@ -109,7 +114,7 @@ def record_and_measure_with_enter(image_path, data_path):
                     # Get the two points
                     p1, p2 = clicks
                     # Calculate the distance
-                    distance = px_distance(p1, p2)
+                    distance = px_distance(p1, p2, w_px = (img_w / 210))
                     print(f"Distance: {distance} mm")
                     update_csv(distance,data_path)
 
@@ -120,7 +125,7 @@ def record_and_measure_with_enter(image_path, data_path):
 
                     clicks.clear()  # Reset for the next measurement
 
-        elif event.key == "z" and lines:
+        elif event.key == ("z" or 'Z') and lines:
             # Remove the last line and corresponding dot
             last_line = lines.pop()
             last_line.remove()
@@ -128,7 +133,7 @@ def record_and_measure_with_enter(image_path, data_path):
             last_dot.remove()
             plt.draw()  # Update the plot after removing the line and dot
 
-        elif event.key == "c":
+        elif event.key == ("c" or 'C'):
             # Clear all lines and dots
             while lines:
                 line = lines.pop()
@@ -138,9 +143,9 @@ def record_and_measure_with_enter(image_path, data_path):
                 dot.remove()
             plt.draw()  # Update the plot after clearing all lines and dots
         
-        elif event.key == "d":
+        elif event.key == ("d" or 'D'):
             update_csv("d")
-        elif event.key == 'n':
+        elif event.key == ('n' or 'N'):
             horz_lin()
             print('New foot')
     # Connect the key press event to the handler
@@ -149,8 +154,18 @@ def record_and_measure_with_enter(image_path, data_path):
 
 # Example usage
 data_path = r'data\foots.csv'
-image_path = r'data\steps_png\S5W2.png'  # Image path
+image_path = r'data\steps_png\S5W6.png'  # Image path
 record_and_measure_with_enter(image_path,data_path)
 horz_lin()
 transpose_csv(data_path)
 open_excel_file(data_path)
+
+# Open the thing
+# Point the cursor and click Enter to leave a 1st mark
+# Do the same for a second mark to measure distance
+# Z undoes a thing
+# C clears the whole thing
+# N signifies a new foot
+# Closing the fucker opens the log for copy paste
+# After copy pasting, close the foots.csv thing and restart with the new specimen
+# 

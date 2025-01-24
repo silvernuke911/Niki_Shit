@@ -13,11 +13,11 @@ The collection is a group of t-tests and chi-square analysis for the data, a pro
 - [x] Toe Spread png measurer
 - [x] Toe Spread data collector / Can be manual
 - [ ] Google-Python API to collect the xlsx file to csv
-- [ ] Make your own csv file with the data
+- [x] Make your own csv file with the data
 - [ ] Raw excel to data frames script
 - [ ] Data processing script
 - [x] Calculate SFI and other relevant values
-- [ ] Graphical visualization of data
+- [x] Graphical visualization of data
 
 ### Operational tasks
 - [x] Scan data W0-W1
@@ -25,13 +25,13 @@ The collection is a group of t-tests and chi-square analysis for the data, a pro
 - [x] Code converters, statistic functions, etc
 - [x] Image distance measurer
 - [x] Feet data collection (can be done manually)
-- [ ] Process xlsx data
-- [ ] Create dataframe from structure for xlsx data 
-- [ ] Create program to process step data
-- [ ] Process step data
-- [ ] Create dataframe from struct for step data 
-- [ ] Process all of it
-- [ ] Generate values
+- [x] Process xlsx data
+- [x] Create dataframe from structure for xlsx data 
+- [x] Create program to process step data
+- [x] Process step data
+- [x] Create dataframe from struct for step data 
+- [x] Process all of it
+- [x] Generate values
 - [ ] Perform statistics
 - [ ] Create graphs
 - [ ] Finish project

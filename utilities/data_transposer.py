@@ -3,7 +3,7 @@ import os
 
 def rotarod():
     # Read the CSV file into a DataFrame
-    input_file = r"data\rot_temp.csv" 
+    input_file = r'data\RTDdata.csv'
     data = pd.read_csv(input_file,header=None)
     print(data)
     # Initialize a new DataFrame for rearranged data
@@ -19,7 +19,7 @@ def rotarod():
     rearranged_df = pd.DataFrame(rearranged_data)
 
     # Save the rearranged data to a new CSV file
-    output_file = r"data\rot_temp.csv"
+    output_file = r'data\RTDdataN.csv'
     rearranged_df.to_csv(output_file, index=False, header=False)
 
     print(f"Rearranged data saved to {output_file}")
@@ -27,7 +27,7 @@ def rotarod():
 
 def hotplate():
     # Read the CSV file without a header
-    input_file = r"data\rot_temp.csv"  
+    input_file = r'data\RTDdata.csv'
     data = pd.read_csv(input_file, header=None)
     print(data)
     # Reshape the DataFrame into a single column
@@ -37,7 +37,7 @@ def hotplate():
     rearranged_df = pd.DataFrame(rearranged_data, columns=["values"])
 
     # Save the rearranged data to a new CSV file
-    output_file = r"data\rot_temp.csv"
+    output_file = r'data\RTDdataN.csv'
     rearranged_df.to_csv(output_file, index=False, header=False)
 
     print(f"Rearranged data saved to {output_file}")
