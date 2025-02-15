@@ -1,1 +1,1 @@
-plt.grid(True)
+    print(dig)
